@@ -263,14 +263,14 @@
             <p>
               Video summarization is inherently subjective: different people may select different moments while all still
               producing valid summaries. Most prior methods collapse these diverse annotations into an averaged target
-              score and learn a deterministic predictor. SummDiff instead formulates video summarization as a conditional
+              score and learn a deterministic predictor. Our method instead formulates video summarization as a conditional
               generation problem and models the distribution of plausible summaries for a given video.
             </p>
             <p>
-              The key idea is to use a diffusion model that denoises importance scores conditioned on the input video.
+              The key idea is to use a diffusion model that denoises importance scores from Guassian noise, conditioned on the input video.
               This allows the model to generate multiple plausible summaries rather than a single regressed output.
-              SummDiff also introduces new knapsack-aware evaluation metrics to better measure whether predicted
-              importance scores preserve the final selected summary.
+              SummDiff also introduces new post-processing (knapsack optimization) aware evaluation metrics to better measure whether the predicted
+              importance scores are consistent with the ground truth summary.
             </p>
           </div>
         </div>
